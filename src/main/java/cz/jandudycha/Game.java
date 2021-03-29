@@ -45,7 +45,7 @@ public class Game extends JPanel implements ActionListener {
     private void seedGame() {
        // arrayOfCells[0][0].setAlive(true);
 
-           arrayOfCells[30][30].setAlive(true);
+           arrayOfCells[50][10].setAlive(true);
     }
 
     public void startGame() {
@@ -71,18 +71,20 @@ public class Game extends JPanel implements ActionListener {
             for (int j = 0; j < arrayOfCells[0].length; j++) {
 
 
-
                 for (int k = 0; k < offsetX.length; k++) {
                     int nx = j + offsetX[k];
                     int ny = i + offsetY[k];
                     if (nx < 0 || nx > arrayOfCells.length - 1 || ny < 0 || ny > arrayOfCells[0].length - 1) {
-
+                        System.out.println("out of bounds");
                     } else {
                         if (arrayOfCells[nx][ny].isAlive()) {
                             arrayOfCells[i][j].setAlive(true);
                         }
                     }
                 }
+
+
+
             }
         }
     }
