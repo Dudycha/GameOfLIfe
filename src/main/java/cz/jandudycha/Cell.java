@@ -1,5 +1,7 @@
 package cz.jandudycha;
 
+
+
 public class Cell {
     private int amountOfNeighbors;
     private boolean alive;
@@ -9,13 +11,18 @@ public class Cell {
         this.alive = alive;
     }
 
+    public void resetNeighbors() {
+        amountOfNeighbors = 0;
+    }
+
+    public void incrementAliveNeighborCount() {
+        amountOfNeighbors++;
+    }
+
     public int getAmountOfNeighbors() {
         return amountOfNeighbors;
     }
 
-    public void setAmountOfNeighbors(int amountOfNeighbors) {
-        this.amountOfNeighbors = amountOfNeighbors;
-    }
 
     public boolean isAlive() {
         return alive;
